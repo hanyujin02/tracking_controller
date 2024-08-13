@@ -177,10 +177,10 @@ namespace controller{
 
 		// acc comman publisher
 		if (this->simulation_){
-			this->accCmdPub_ = this->nh_.advertise<mavros_msgs::PositionTarget>("/mavros/setpoint_raw/local", 100);
+			this->accCmdPub_ = this->nh_.advertise<mavros_msgs::PositionTarget>("/CERLAB/quadcopter/cmd_acc", 100);
 		}
 		else{
-			this->accCmdPub_ = this->nh_.advertise<mavros_msgs::PositionTarget>("CERLAB/quadcopter/cmd_acc", 100);
+			this->accCmdPub_ = this->nh_.advertise<mavros_msgs::PositionTarget>("/mavros/setpoint_raw/local", 100);
 		}
 		
 		// current pose visualization publisher
